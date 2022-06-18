@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration Page</title>
+    </head>
+    <body>
+        <div class="section">
+            <div class="container">
+                <div class="main" style="display: flex">
+                    <div class="left-side">
+                        <h1>Learn to code by watching others</h1>
+                        <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is
+                                                                                great, but understanding how developers think is invaluable.
+                        </p>
+                    </div>
+                    <div class="right-side">
+                        <div style='color:white' class="Ads">
+                            <p>Try it free 7 days
+                                <span style="color:gray">then $20/mo. thereafter</span>
+                            </p>
+                        </div>
+                        <form style="padding: 10px" class="form" autocomplete="none">
+                            <div style="width: 100%" class="input">
+
+                                <input style="width: 90%; padding: 15px" name="first" type="text" required placeholder="First Name" autocomplete="none">
+
+                                <div class="error" data-error="First Name cannot be empty"></div>
+
+
+                            </div>
+                            <div style="width: 100%" class="input">
+
+
+                                <input style="width: 90% ; padding: 15px" type="text" name="last" required placeholder="Last  Name" autocomplete="none">
+                                <div class="error" data-error="Last Name cannot be empty"></div>
+
+                            </div>
+                            <div style="width: 100%" class="input">
+
+                                <input style="width: 90% ; padding: 15px" id="email" type="email" required placeholder="Email Address"  autocomplete="none">
+
+                                <div class="error" data-error="Looks like this is not an email"></div>
+
+                            </div>
+
+
+                            <div style="width: 100%" class="input">
+
+                                <input style="width: 90%; padding: 15px" type="password" name="password" required placeholder="Password">
+                                <div class="error" data-error="Password cannot be empty"></div>
+
+                            </div>
+
+
+                            <div style="width: 100%" class="btn">
+                                <button style="width: 95% ; padding: 10px; color:white" id="submit">CLAIM YOUR FREE TRIAL</button>
+                            </div>
+                            <div class="form-footer">
+                                <p style="color:gray">By clicking the button, you are agreeing to our
+                                    <span style="color:red">Terms and Services</span>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <style>
+            body {
+                    background: url('bg-intro-desktop.png');
+                    background-color: rgba(231, 71, 7, 0.5);
+                }
+            .section {
+                
+                height: 100vh;
+            }
+            .container {
+                display: flex;
+                height: 90vh;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .main{
+            /* justify-content: space-around; */
+            align-items: center;
+            margin-top: 100px;
+        }
+            .left-side {
+                /* text-align: center; */
+                display: flex;
+                flex-direction: column;
+                color: white;
+                width: 50%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+                font-family: sans-serif;
+                /* margin-left: 0; */
+
+            }
+            .left-side h1 {
+                font-size: 2.5rem;
+                width: 50%;
+            }
+            .left-side p {
+                font-size: 17px;
+                width: 50%;
+            }
+            .right-side {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                /* color: white; */
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+                font-family: sans-serif;
+                /* margin: 2rem; */
+                /* background-color: aliceblue; */
+            }
+            .right-side div{
+                margin: 0 20px ;
+            }
+
+            .right-side .Ads {
+                background-color: rgb(92, 20, 85);
+                margin-bottom: 20px !important;
+                width: 100%;
+                border-radius: 5px;
+                border: 1px solid rgb(92, 20, 85);
+            }
+
+            .right-side .form{
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-radius: 5px;
+            }
+            .right-side .form .input{
+                
+                /* margin: 5px; */
+                padding: 20px;
+            }
+
+            button{
+                background-color:green;
+                border-radius: 5px;
+                /* width: 300px; */
+            }
+
+            .form-footer{
+                margin-bottom: 30px !important;
+                cursor: pointer;
+            }
+            input{
+                border-radius: 5px;
+            }
+            @media only screen and (max-width: 600px) {
+                body {
+                    background: url('bg-intro-mobile.png');
+                     background-color: rgba(231, 71, 7, 0.5); 
+                     padding-bottom: 10px !important;
+                     padding-top: 10px !important;
+                }
+                
+                .main{
+                    flex-direction: column;
+                    width: 100%;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    /* background-color: rgba(231, 71, 7, 0.5); */
+                    /* height: 100vh; */
+                }
+            .container{
+                height: 100vh;
+            }
+            input{
+                padding: 6px !important;
+                width: 80%;
+            }
+            .left-side{
+                width: 100%;
+                padding: 0 5px;
+                height: 40vh;
+                text-align: center;
+                margin-top: 5px;
+                justify-content: end;
+                margin-top: 0 !important;
+                
+            
+            }
+            .left-side h1 {
+                font-size: 2rem;
+                width: 90%;
+                
+            }
+            .left-side p {
+                width: 80%;
+                margin: 0 !important;
+                padding: 0 !important;
+            
+            }
+            .right-side {
+                margin: 0 10px;
+            }
+            .Ads{
+                width: 80%;
+            }
+            .form {
+                width: 90%;
+            }
+            .form div {
+                width: 90%;
+            }
+            .right-side .Ads {
+                margin-top: 0;
+                
+                padding: 0 !important;
+            }
+            .right-side .form .input{
+                
+                /* margin: 5px; */
+                padding: 2px;
+            }
+            .form-footer{
+                margin-bottom: 0 !important;
+                cursor: pointer;
+            }
+            .right-side .form{
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            }
+            
+            
+        </style>
+    </body>
+</html></body></html>
