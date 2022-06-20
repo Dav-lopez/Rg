@@ -23,24 +23,24 @@
                             </p>
                         </div>
                         <form style="padding: 10px" class="form" autocomplete="none">
-                            <div style="width: 100%" class="input">
+                            <div data-error="First Name cannot be empty" style="width: 100%" class="input">
 
-                                <input style="width: 90%; padding: 15px" name="first" type="text" required placeholder="First Name" autocomplete="none">
+                                <input class="input2" style="width: 90%; padding: 15px" name="first" type="text" required placeholder="First Name" autocomplete="none">
 
                                 <div class="error" data-error="First Name cannot be empty"></div>
 
 
                             </div>
-                            <div style="width: 100%" class="input">
+                            <div  style="width: 100%" class="input">
 
 
-                                <input style="width: 90% ; padding: 15px" type="text" name="last" required placeholder="Last  Name" autocomplete="none">
+                                <input class="input2" style="width: 90% ; padding: 15px" type="text" name="last" required placeholder="Last  Name" autocomplete="none">
                                 <div class="error" data-error="Last Name cannot be empty"></div>
 
                             </div>
-                            <div style="width: 100%" class="input">
+                            <div  style="width: 100%" class="input">
 
-                                <input style="width: 90% ; padding: 15px" id="email" type="email" required placeholder="Email Address"  autocomplete="none">
+                                <input class="input2" style="width: 90% ; padding: 15px" id="email" type="email" required placeholder="Email Address"  autocomplete="none">
 
                                 <div class="error" data-error="Looks like this is not an email"></div>
 
@@ -49,7 +49,7 @@
 
                             <div style="width: 100%" class="input">
 
-                                <input style="width: 90%; padding: 15px" type="password" name="password" required placeholder="Password">
+                                <input class="input2" style="width: 90%; padding: 15px" type="password" name="password" required placeholder="Password">
                                 <div class="error" data-error="Password cannot be empty"></div>
 
                             </div>
@@ -150,7 +150,45 @@
                 /* margin: 5px; */
                 padding: 20px;
             }
+            .input2:invalid:focus {
+            background: url(icon-error.svg) no-repeat 96%center white;
+            outline: 2px solid hsl(0, 100%, 74%);
+            border-radius: 5px;
+        }
+        .input2:required:focus ~ .data-error {
+            display:block;
+            outline: 2px solid hsl(0, 100%, 74%);
+            text-align: right;
+            font-size: 40px;
+            font-style: italic;
 
+        }
+        .input2:focus:invalid~.error {
+        /* position: relative;
+        margin: 1.3rem; */
+        color: red;
+        }
+        input:focus:invalid~.error::after {
+            content: attr(data-error);
+            display:block;
+            color: 2px solid hsl(0, 100%, 74%);
+            text-align: right;
+            font-size: 12px;
+            font-style: italic;}
+
+        .data-error{
+            display: none;
+            margin-bottom: 0;
+        }
+        .input2:valid {
+            outline: 3px solid green;
+        }
+        .input2:required {
+            outline: 2px solid transparent;
+        }
+        /* input[type=email]:invalid:focus::-webkit-input-placeholder{
+            outline: 4px solid hsl(0, 100%, 74%);
+        } */
             button{
                 background-color:green;
                 border-radius: 5px;
@@ -254,5 +292,6 @@
             
             
         </style>
+        
     </body>
 </html></body></html>
